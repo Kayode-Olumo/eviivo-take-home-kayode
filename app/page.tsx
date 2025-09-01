@@ -234,13 +234,13 @@ export default function HomePage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#A0E4D0] text-black font-medium py-3 px-6 rounded-lg hover:bg-[#A0E4D0]/90 transition-all text-sm"
+                  className={`${buttonStyles.base} bg-[#A0E4D0] text-black hover:bg-[#A0E4D0]/90`}
                 >
                   Submit
                 </button>
               </form>
             ) : (
-              <form onSubmit={handleAuthorSubmit} className="space-y-6">
+              <form onSubmit={handleAuthorSubmit} className={layoutStyles.form}>
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-black mb-2">
                     First Name*
@@ -253,10 +253,10 @@ export default function HomePage() {
                       setAuthorForm({ ...authorForm, firstName: e.target.value })
                       clearAuthorError("firstName")
                     }}
-                    className={`w-full px-4 py-3 bg-gray-50 rounded-lg border transition-all focus:outline-none ${
+                    className={`${inputStyles.base} ${
                       authorErrors.firstName
-                        ? "border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100"
-                        : "border-gray-200 focus:border-[#D9C5E6] focus:ring-2 focus:ring-[#D9C5E6]/20"
+                        ? inputStyles.error
+                        : `${inputStyles.normal} focus:border-[#D9C5E6] focus:ring-2 focus:ring-[#D9C5E6]/20`
                     }`}
                     placeholder="Enter first name"
                   />
@@ -275,10 +275,10 @@ export default function HomePage() {
                       setAuthorForm({ ...authorForm, lastName: e.target.value })
                       clearAuthorError("lastName")
                     }}
-                    className={`w-full px-4 py-3 bg-gray-50 rounded-lg border transition-all focus:outline-none ${
+                    className={`${inputStyles.base} ${
                       authorErrors.lastName
-                        ? "border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100"
-                        : "border-gray-200 focus:border-[#D9C5E6] focus:ring-2 focus:ring-[#D9C5E6]/20"
+                        ? inputStyles.error
+                        : `${inputStyles.normal} focus:border-[#D9C5E6] focus:ring-2 focus:ring-[#D9C5E6]/20`
                     }`}
                     placeholder="Enter last name"
                   />
@@ -303,7 +303,7 @@ export default function HomePage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#D9C5E6] text-black font-medium py-3 px-6 rounded-lg hover:bg-[#D9C5E6]/90 transition-all text-sm"
+                  className={`${buttonStyles.base} bg-[#D9C5E6] text-black hover:bg-[#D9C5E6]/90`}
                 >
                   Submit
                 </button>

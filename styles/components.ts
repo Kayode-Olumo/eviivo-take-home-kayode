@@ -1,38 +1,21 @@
-// Component styles to reduce verbose Tailwind classes
-
 export const multiSelectStyles = {
-  // Container styles
   container: "relative",
   label: "block text-sm font-medium text-black mb-2",
   
-  // Dropdown trigger styles
   trigger: {
     base: "w-full min-h-[48px] px-4 py-3 bg-gray-50 rounded-lg border cursor-pointer transition-all",
     error: "border-red-300 focus-within:border-red-400 focus-within:ring-2 focus-within:ring-red-100",
     normal: "border-gray-200",
   },
   
-  // Content wrapper
   content: "flex flex-wrap gap-2 items-center",
-  
-  // Placeholder text
   placeholder: "text-gray-400",
-  
-  // Dropdown arrow
   arrow: "ml-auto w-5 h-5 text-gray-400 transition-transform",
   arrowOpen: "rotate-180",
-  
-  // Dropdown menu
   menu: "absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto",
-  
-  // Menu items
   menuItem: "px-4 py-3 cursor-pointer hover:bg-gray-50 flex items-center justify-between",
   menuItemSelected: "text-gray-700",
-  
-  // Check icon
   checkIcon: "w-5 h-5",
-  
-  // Error message
   error: "mt-2 text-sm text-red-500",
 }
 
@@ -58,7 +41,6 @@ export const colorSchemes = {
   },
 }
 
-// Helper function to get color classes based on accent color
 export const getColorClasses = (accentColor: string) => {
   switch (accentColor) {
     case "#A0E4D0":
@@ -70,21 +52,18 @@ export const getColorClasses = (accentColor: string) => {
   }
 }
 
-// Form input styles
 export const inputStyles = {
   base: "w-full px-4 py-3 bg-gray-50 rounded-lg border transition-all focus:outline-none",
   normal: "border-gray-200",
   error: "border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100",
 }
 
-// Button styles
 export const buttonStyles = {
   base: "w-full font-medium py-3 px-6 rounded-lg transition-all text-sm",
   primary: "text-black",
   secondary: "text-gray-600 hover:text-black hover:bg-gray-50 border border-gray-200",
 }
 
-// Tab styles
 export const tabStyles = {
   container: "flex gap-2 mb-8",
   button: "px-4 py-2 rounded-lg text-sm font-medium transition-all",
@@ -92,7 +71,6 @@ export const tabStyles = {
   inactive: "text-gray-600 hover:text-black hover:bg-gray-50 border border-gray-200",
 }
 
-// Layout styles
 export const layoutStyles = {
   page: "min-h-screen bg-white",
   main: "flex min-h-screen",
@@ -103,7 +81,6 @@ export const layoutStyles = {
   form: "space-y-6",
 }
 
-// Gradient background styles
 export const gradientStyles = {
   container: "w-full bg-gradient-to-br from-[#FFC8E1] via-[#A0E4D0] to-[#AFC9DC] relative rounded-3xl",
   content: "absolute bottom-0 left-0 right-0 p-12 text-black",
