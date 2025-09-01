@@ -8,6 +8,7 @@ import { useDropdown } from "../hooks/use-dropdown"
 import { Toast } from "../components/toast"
 import { MultiSelectDropdown } from "../components/multi-select-dropdown"
 import { YearDropdown } from "../components/year-dropdown"
+import { layoutStyles, gradientStyles, inputStyles, buttonStyles, tabStyles } from "../styles/components"
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<"book" | "author">("book")
@@ -125,27 +126,27 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className={layoutStyles.page}>
       <Toast message={toast.message} visible={toast.visible} isVisible={toast.isVisible} />
 
-      <div className="flex min-h-screen">
-        <div className="hidden lg:flex lg:w-1/2 relative p-8">
-          <div className="w-full bg-gradient-to-br from-[#FFC8E1] via-[#A0E4D0] to-[#AFC9DC] relative rounded-3xl">
-            <div className="absolute bottom-0 left-0 right-0 p-12 text-black">
-              <h2 className="text-5xl font-black mb-4 leading-tight">
+      <div className={layoutStyles.main}>
+        <div className={layoutStyles.sidebar}>
+          <div className={gradientStyles.container}>
+            <div className={gradientStyles.content}>
+              <h2 className={gradientStyles.title}>
                 Organise Your <em className="italic font-medium">Library</em>
               </h2>
-              <p className="text-lg text-black/70 leading-relaxed max-w-md font-medium">
+              <p className={gradientStyles.subtitle}>
                 Keep track of your favourite books and authors. Build your personal collection, one entry at a time.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12">
-          <div className="w-full max-w-md">
+        <div className={layoutStyles.content}>
+          <div className={layoutStyles.formContainer}>
 
-            <div className="mb-8">
+            <div className={layoutStyles.header}>
               <p className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">LIBRARY COLLECTION</p>
               <h1 className="text-4xl font-black text-black mb-6 leading-tight">
                 Add Your{" "}
@@ -154,23 +155,23 @@ export default function HomePage() {
                 </span>
               </h1>
 
-              <div className="flex gap-2 mb-8">
+              <div className={tabStyles.container}>
                 <button
                   onClick={() => setActiveTab("book")}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`${tabStyles.button} ${
                     activeTab === "book"
                       ? "bg-[#A0E4D0] text-black"
-                      : "text-gray-600 hover:text-black hover:bg-gray-50 border border-gray-200"
+                      : tabStyles.inactive
                   }`}
                 >
                   Books
                 </button>
                 <button
                   onClick={() => setActiveTab("author")}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`${tabStyles.button} ${
                     activeTab === "author"
                       ? "bg-[#D9C5E6] text-black"
-                      : "text-gray-600 hover:text-black hover:bg-gray-50 border border-gray-200"
+                      : tabStyles.inactive
                   }`}
                 >
                   Authors
@@ -179,7 +180,7 @@ export default function HomePage() {
             </div>
 
             {activeTab === "book" ? (
-              <form onSubmit={handleBookSubmit} className="space-y-6">
+              <form onSubmit={handleBookSubmit} className={layoutStyles.form}>
                 <div>
                   <label htmlFor="title" className="block text-sm font-medium text-black mb-2">
                     Book Title*
@@ -192,10 +193,10 @@ export default function HomePage() {
                       setBookForm({ ...bookForm, title: e.target.value })
                       clearBookError("title")
                     }}
-                    className={`w-full px-4 py-3 bg-gray-50 rounded-lg border transition-all focus:outline-none ${
+                    className={`${inputStyles.base} ${
                       bookErrors.title
-                        ? "border-red-300 focus:border-red-400 focus:ring-2 focus:ring-red-100"
-                        : "border-gray-200 focus:border-[#A0E4D0] focus:ring-2 focus:ring-[#A0E4D0]/20"
+                        ? inputStyles.error
+                        : `${inputStyles.normal} focus:border-[#A0E4D0] focus:ring-2 focus:ring-[#A0E4D0]/20`
                     }`}
                     placeholder="Enter book title"
                   />
