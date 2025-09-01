@@ -1,68 +1,66 @@
 # Eviivo Book App
 
-A modern web application for managing your personal book collection and author database.
+## What's This About?
 
-## Overview
+A simple app to help you keep track of your favourite books and authors. It has two tabs — one for adding books and another for authors — with nice touches like dropdown menus and validation to make sure you don’t miss anything important.  
 
-This is a React-based web application built with Next.js that allows users to:
-- Add and manage books with titles, genres, and publication years
-- Add and manage authors with biographical information
-- Organize their personal library collection
+It’s designed to work smoothly on mobile, tablet, and desktop.  
+
+---
 
 ## Features
 
-- **Book Management**: Add books with title, genre selection, and publication year
-- **Author Management**: Add authors with first name, last name, and birth year
-- **Modern UI**: Clean, responsive design with gradient backgrounds and smooth animations
-- **Form Validation**: Real-time validation with error handling
-- **Toast Notifications**: User feedback for successful submissions
+- **Responsive design**: Works well on mobile and desktop  
+- **Smart dropdowns**: Multi-select genres, scrollable year lists  
+- **Real-time validation**: Errors show instantly and clear when fixed  
+- **Feedback**: Toast notifications when you add items  
+- **Clean UI**: Split-screen layout with gradient background  
+
+---
+
+## How It Works
+
+### Structure
+- Reusable components for UI  
+- Custom hooks for logic (validation, dropdowns, toast)  
+
+### Forms
+- Separate forms for books and authors  
+- Real-time validation with instant error clearing  
+- Genre picker with multiple selections displayed as chips  
+
+### Interactions
+- Toast notifications slide in on success  
+- Smooth hover and click states  
+- Adaptive layout across screen sizes  
+
+### Data Fields
+- **Books**: Title, genres (multi-select), publication year (1800+)  
+- **Authors**: First name, last name, birth year (1900+)  
+- All fields are **required and validated**  
+
+---
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 with React 19
-- **Styling**: Tailwind CSS with custom design system
-- **UI Components**: Radix UI primitives
-- **Form Handling**: React Hook Form with Zod validation
-- **State Management**: React hooks and custom hooks
+- [Next.js 15](https://nextjs.org/) — React framework  
+- [TypeScript](https://www.typescriptlang.org/) — Static typing  
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first styling  
+- Custom React hooks — Reusable logic  
+
+---
 
 ## Getting Started
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+Clone the repo and run locally:
 
-2. Run the development server:
-   ```bash
-   npm run dev
-   ```
+```bash
+# Grab the code
+git clone <your-repo-url>
+cd books-authors-app
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+# Install dependencies
+npm install
 
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-
-## Project Structure
-
-```
-├── app/                 # Next.js app directory
-│   ├── layout.tsx      # Root layout component
-│   ├── page.tsx        # Main page component
-│   └── globals.css     # Global styles
-├── components/         # Reusable UI components
-├── hooks/             # Custom React hooks
-├── lib/               # Utility functions and design system
-└── public/            # Static assets
-```
-
-## Design System
-
-The app uses a custom design system with:
-- Color palette with gradients and accent colors
-- Typography system with custom fonts
-- Spacing and border radius tokens
-- Component variants for consistent styling
+# Start the dev server
+npm run dev
