@@ -73,7 +73,6 @@ export function MultiSelectDropdown({
         </div>
       </div>
 
-      {/* Dropdown Menu */}
       {isOpen && (
         <div data-dropdown className={multiSelectStyles.menu}>
           {options.map((option) => (

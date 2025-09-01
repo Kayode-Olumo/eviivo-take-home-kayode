@@ -65,7 +65,6 @@ export function useForm<T extends Record<string, any>>({
 
       try {
         await onSubmit(formData)
-        // Reset form after successful submission
         setFormData(initialData)
       } catch (error) {
         const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred"

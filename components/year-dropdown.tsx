@@ -48,7 +48,6 @@ export function YearDropdown({
         </div>
       </div>
 
-      {/* Dropdown Menu */}
       {isOpen && (
         <div
           data-dropdown

@@ -1,6 +1,5 @@
 export const designSystem = {
   colors: {
-    // Primary brand colors
     primary: {
       50: "#f8fafc",
       100: "#f1f5f9",
@@ -13,35 +12,33 @@ export const designSystem = {
       800: "#1e293b",
       900: "#0f172a",
     },
-    // Accent colors inspired by the reference
     accent: {
-      yellow: "#facc15", // Bright yellow like in the reference
-      lime: "#84cc16", // Bright lime green from the reference
-      purple: "#a855f7", // More vibrant purple
-      blue: "#3b82f6", // Cleaner blue
-      lavender: "#e0e7ff", // Soft background accent
+      yellow: "#facc15",
+      lime: "#84cc16",
+      purple: "#a855f7",
+      blue: "#3b82f6",
+      lavender: "#e0e7ff",
     },
-    // Semantic colors
     success: "#10b981",
     error: "#ef4444",
     warning: "#f59e0b",
   },
 
   spacing: {
-    xs: "0.5rem", // 8px
-    sm: "0.75rem", // 12px
-    md: "1rem", // 16px
-    lg: "1.5rem", // 24px
-    xl: "2rem", // 32px
-    "2xl": "3rem", // 48px
+    xs: "0.5rem",
+    sm: "0.75rem",
+    md: "1rem",
+    lg: "1.5rem",
+    xl: "2rem",
+    "2xl": "3rem",
   },
 
   borderRadius: {
-    sm: "0.75rem", // 12px
-    md: "1rem", // 16px
-    lg: "1.5rem", // 24px
-    xl: "2rem", // 32px
-    "2xl": "2.5rem", // 40px
+    sm: "0.75rem",
+    md: "1rem",
+    lg: "1.5rem",
+    xl: "2rem",
+    "2xl": "2.5rem",
   },
 
   shadows: {
@@ -68,7 +65,6 @@ export const designSystem = {
   },
 } as const
 
-// Component style variants
 export const componentStyles = {
   card: {
     base: "bg-white rounded-2xl shadow-card border border-slate-200/60 overflow-hidden",

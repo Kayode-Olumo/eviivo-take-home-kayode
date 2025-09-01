@@ -4,7 +4,6 @@ import { useEffect } from "react"
 
 export const useDropdown = () => {
   const closeAllDropdowns = () => {
-    // This will be used by components to close their dropdowns
     const event = new CustomEvent("closeAllDropdowns")
     window.dispatchEvent(event)
   }
