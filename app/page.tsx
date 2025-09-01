@@ -129,10 +129,8 @@ export default function HomePage() {
       <Toast message={toast.message} visible={toast.visible} isVisible={toast.isVisible} />
 
       <div className="flex min-h-screen">
-        {/* Left Section - Visual Content */}
         <div className="hidden lg:flex lg:w-1/2 relative p-8">
           <div className="w-full bg-gradient-to-br from-[#FFC8E1] via-[#A0E4D0] to-[#AFC9DC] relative rounded-3xl">
-            {/* Content overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-12 text-black">
               <h2 className="text-5xl font-black mb-4 leading-tight">
                 Organise Your <em className="italic font-medium">Library</em>
@@ -144,10 +142,9 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Right Section - Form */}
         <div className="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12">
           <div className="w-full max-w-md">
-            {/* Header */}
+
             <div className="mb-8">
               <p className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">LIBRARY COLLECTION</p>
               <h1 className="text-4xl font-black text-black mb-6 leading-tight">
@@ -157,7 +154,6 @@ export default function HomePage() {
                 </span>
               </h1>
 
-              {/* Tabs */}
               <div className="flex gap-2 mb-8">
                 <button
                   onClick={() => setActiveTab("book")}
@@ -182,7 +178,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Forms */}
             {activeTab === "book" ? (
               <form onSubmit={handleBookSubmit} className="space-y-6">
                 <div>

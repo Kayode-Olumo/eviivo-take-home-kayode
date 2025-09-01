@@ -1,30 +1,68 @@
-# Frontend application feedback
+# Eviivo Book App
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/kayode-olumos-projects/v0-frontend-application-feedback)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/8ZcgBH0KDFI)
+A modern web application for managing your personal book collection and author database.
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+This is a React-based web application built with Next.js that allows users to:
+- Add and manage books with titles, genres, and publication years
+- Add and manage authors with biographical information
+- Organize their personal library collection
 
-## Deployment
+## Features
 
-Your project is live at:
+- **Book Management**: Add books with title, genre selection, and publication year
+- **Author Management**: Add authors with first name, last name, and birth year
+- **Modern UI**: Clean, responsive design with gradient backgrounds and smooth animations
+- **Form Validation**: Real-time validation with error handling
+- **Toast Notifications**: User feedback for successful submissions
 
-**[https://vercel.com/kayode-olumos-projects/v0-frontend-application-feedback](https://vercel.com/kayode-olumos-projects/v0-frontend-application-feedback)**
+## Tech Stack
 
-## Build your app
+- **Framework**: Next.js 15 with React 19
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: Radix UI primitives
+- **Form Handling**: React Hook Form with Zod validation
+- **State Management**: React hooks and custom hooks
 
-Continue building your app on:
+## Getting Started
 
-**[https://v0.app/chat/projects/8ZcgBH0KDFI](https://v0.app/chat/projects/8ZcgBH0KDFI)**
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## How It Works
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+├── app/                 # Next.js app directory
+│   ├── layout.tsx      # Root layout component
+│   ├── page.tsx        # Main page component
+│   └── globals.css     # Global styles
+├── components/         # Reusable UI components
+├── hooks/             # Custom React hooks
+├── lib/               # Utility functions and design system
+└── public/            # Static assets
+```
+
+## Design System
+
+The app uses a custom design system with:
+- Color palette with gradients and accent colors
+- Typography system with custom fonts
+- Spacing and border radius tokens
+- Component variants for consistent styling
