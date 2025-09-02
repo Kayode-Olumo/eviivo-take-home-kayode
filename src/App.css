@@ -1,4 +1,3 @@
-/* Custom focus ring colors for form inputs */
 .focus-ring-mint:focus {
   --tw-ring-color: #a0e4d0;
 }
@@ -7,7 +6,6 @@
   --tw-ring-color: #d9c5e6;
 }
 
-/* Smooth transitions for all interactive elements */
 * {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
     transform, filter, backdrop-filter;
@@ -15,7 +13,6 @@
   transition-duration: 150ms;
 }
 
-/* Custom scrollbar for dropdowns */
 .overflow-y-auto::-webkit-scrollbar {
   width: 6px;
 }
